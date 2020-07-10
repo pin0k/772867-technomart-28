@@ -1277,6 +1277,7 @@ h1 {
 
 .services-slider p {
   margin-left: 80px;
+  max-width: 313px;
 }
 
 #button-1:checked ~ .services-slider-wrap .services-slider-inner {
