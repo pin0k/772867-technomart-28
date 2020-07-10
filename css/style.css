@@ -1262,7 +1262,9 @@ h1 {
   background-position: 100% 100%;
 }
 
-.services-slider h3 {
+.services-slider-1 h3,
+.services-slider-2 h3,
+.services-slider- h3 {
   margin: 0;
   margin-top: -3px;
   margin-left: 80px;
@@ -1275,13 +1277,17 @@ h1 {
   color: var(--basic-nav);
 }
 
-.services-slider p {
+.services-slider-1 p,
+.services-slider-2 p,
+.services-slider-3 p {
   margin-left: 80px;
   margin-bottom: 0;
   max-width: 313px;
 }
 
-.services-slider p:last-child {
+.services-slider-1 p:last-child,
+.services-slider-2 p:last-child,
+.services-slider-3 p:last-child {
 	margin-top: 0;
   max-width: 200px;
 }
