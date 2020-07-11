@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=latin,cyrillic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
     <header>
@@ -15,19 +15,13 @@
           <a title="Главная страница Техномарта" class="logo-header">
             <img src="img/svg/logo-header-technomart.svg" alt="Логотип компании Техномарт" title="Логотип интернет-магазина Техномарт" width="108" height="18">
           </a>
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <label for="searсh-field">
+          <form action="https://echo.htmlacademy.ru/" method="get" class="search-form">
+            <label>
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" class="search">
-                <path fill="#fff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0015 7.5 7.5 7.5 0 107.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 012 7.5z"/>
+                <path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0015 7.5 7.5 7.5 0 107.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 012 7.5z"/>
               </svg>
-              <span>
-                Поиск:
-              </span>
+              <input type="search" name="search" placeholder="Поиск:">
             </label>
-            <input type="search" name="field-search" id="searсh-field" placeholder="Поиск:">
-            <button type="submit" class="visually-hidden">
-              Искать
-            </button>
           </form>
           <ul class="user-menu">
             <li>
@@ -162,22 +156,9 @@
             </li>
           </ul>
           <div class="promo-list-slider">
-            <div class="promo-slider-wrap">
-              <input type="radio" id="btn-1" name="toggle" checked>
-              <input type="radio" id="btn-2" name="toggle">
-              <ul class="promo-slider-inner">
-                <li class="promo-slide-1">
-                  <h3 class="title-slide">
-                    Перфораторы
-                  </h3>
-                  <p>
-                    Настоящие мужские игрушки
-                  </p>
-                  <a href="catalog.html" title="Каталог дрелей">
-                    Открыть каталог
-                  </a>
-                </li>
-                <li class="promo-slide-2">
+            <div class="promo-slider">
+              <ul class="promo-slider-2">
+                <li class="promo-slide">
                   <h3 class="title-slide">
                     Дрели
                   </h3>
@@ -188,16 +169,25 @@
                     Открыть каталог
                   </a>
                 </li>
+                <li class="promo-slide slide-current">
+                  <h3 class="title-slide">
+                    Перфораторы
+                  </h3>
+                  <p>
+                    Настоящие мужские игрушки
+                  </p>
+                  <a href="catalog.html" title="Каталог дрелей">
+                    Открыть каталог
+                  </a>
+                </li>
               </ul>
-              <div class="slider-controls">
-                <label for="btn-1"></label>
-                <label for="btn-2"></label>
+              <div class="promo-slider-arrow">
+                <button class="arrow-left" type="button" aria-label="Предыдущий слайд"></button>
+                <button class="arrow-right" type="button" aria-label="Следующий слайд"></button>
               </div>
-              <div class="slider-control-arrow">
-                <label for="btn-1" class="arrow-left">
-                </label>
-                <label for="btn-2" class="arrow-right">
-                </label>
+              <div class="promo-slider-controls">
+                <button type="button" aria-label="Первый слайд"></button>
+                <button class="current" type="button" aria-label="Второй слайд"></button>
               </div>
             </div>
             <ul class="promo-list">
@@ -340,9 +330,7 @@
         </div>
         <div class="button-back">
           <a href="blank.html" title="Оформить заказ" class="link">
-            <p>
-              Оформить заказ
-            </p>
+            Оформить заказ
           </a>
           <button class="link continue">
             Продолжить покупки
@@ -410,64 +398,53 @@
             Сервисы
           </h2>
           <p>
-            Хороший интернет-магазин отличается от плохого не только ценами! <br>
+            Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <div class="services-slider">
-            <input type="radio" id="button-1" name="toggle" checked>
-            <input type="radio" id="button-2" name="toggle">
-            <input type="radio" id="button-3" name="toggle">
             <div class="services-slider-controls">
-              <label for="button-1">
-                Доставка
-              </label>
-              <label for="button-2">
-                Гарантия
-              </label>
-              <label for="button-3">
-                Кредит
-              </label>
+              <button class="current" type="button">Доставка</button>
+              <button type="button">Гарантия</button>
+              <button type="button" >Кредит</button>
             </div>
-            <div class="services-slider-wrap">
-              <div class="services-slider-inner">
-                <div class="services-slider-1">
-                  <h3>
-                    Доставка
-                  </h3>
-                  <p>
-                    Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                  </p>
-                  <p>
-                    Ведь мы неплохо заработаем, поднимая его на ваш этаж!
-                  </p>
-                </div>
-                <div class="services-slider-2">
-                  <h3>
-                    Гарантия
-                  </h3>
-                  <p>
-                    Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
-                  </p>
-                  <p>
-                    Дом уж восстановите как-нибудь сами.
-                  </p>
-                </div>
-                <div class="services-slider-3">
-                  <h3>
-                    Кредит
-                  </h3>
-                  <p>
-                    Залезть в долговую яму стало проще!
-                  </p>
-                  <p>
-                    Кредитные консультанты придут вам на помощь.
-                  </p>
-                  <a href="blank.html" class="credit">
-                    Отправить заявку
-                  </a>
-                </div>
-              </div>
-            </div>
+            <ul class="services-slider-1">
+              <li class="services-slide services-slide-current">
+                <h3>
+                  Доставка
+                </h3>
+                <p>
+                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+                </p>
+                <p>
+                  Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+                </p>
+              </li>
+              <li class="services-slide">
+                <h3>
+                  Гарантия
+                </h3>
+                <p>
+                  <span>Если купленный у нас товар поломается или заискрит, </span><span>а также в случае пожара, спровоцированного его возгоранием, </span><span>вы всегда можете быть уверены в нашей гарантии. Мы обменяем </span>сгоревший товар на новый.
+                </p>
+                <p>
+                  Дом уж восстановите как-нибудь сами.
+                </p>
+              </li>
+              <li class="services-slide">
+                <h3>
+                  Кредит
+                </h3>
+                <p>
+                  Залезть в долговую яму стало проще!
+                </p>
+                <p>
+                  Кредитные консультанты придут вам на помощь.
+                </p>
+                <a href="blank.html" class="credit">
+                  Отправить заявку
+                </a>
+              </li>
+            </ul>
           </div>
         </div>  
       </section>
@@ -575,7 +552,7 @@
               </a>
             </li>
             <li>
-              <a href="catalog.html" title="Каталог">
+              <a title="Каталог">
                 Каталог
               </a>
             </li>
@@ -627,7 +604,7 @@
             Все права защищены
           </p>
           <ul class="social">
-            <li>
+            <li class="social-item">
               <a href="blank.html" title="Вконтакте">
                 <span class="visually-hidden">
                   Вконтакте
@@ -637,7 +614,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-item">
               <a href="blank.html" title="Фейсбук">
                 <span class="visually-hidden">
                   Фейсбук
@@ -647,7 +624,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="social-item">
               <a href="blank.html" title="Инстаграм">
                 <span class="visually-hidden">
                   Инстаграм

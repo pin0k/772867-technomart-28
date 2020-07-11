@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=latin,cyrillic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
     <header>
@@ -15,19 +15,13 @@
           <a href="index.html" title="Главная страница Техномарта" class="logo-header">
             <img src="img/svg/logo-header-technomart.svg" alt="Логотип компании Техномарт" title="Логотип интернет-магазина Техномарт" width="108" height="18">
           </a>
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <label for="searсh-field">
+          <form action="https://echo.htmlacademy.ru/" method="get" class="search-form">
+            <label>
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" class="search">
-                <path fill="#fff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0015 7.5 7.5 7.5 0 107.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 012 7.5z"/>
+                <path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0015 7.5 7.5 7.5 0 107.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 012 7.5z"/>
               </svg>
-              <span>
-                Поиск:
-              </span>
+              <input type="search" name="search" placeholder="Поиск:">
             </label>
-            <input type="search" name="field-search" id="searсh-field" placeholder="Поиск:">
-            <button type="submit" class="visually-hidden">
-              Искать
-            </button>
           </form>
           <ul class="user-menu">
             <li>
@@ -73,15 +67,19 @@
             </address>
           </div>
           <div class="user-navigation">
-            <a href="blank.html" title="Вход" class="authorization">
+            <div class="authorization">
+            <a href="blank.html" class="profile" title="Профайл пользователя">
               <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z" fill="#C5C5C5"/>
               </svg>
               Равшан Джамшутович
+            </a>
+            <a href="blank.html" class="logout" title="Деавторизация">
               <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" fill="#C5C5C5"/><path d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0 .12 1.81.09 3.03v10.94C.1 15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" fill="#C5C5C5"/>
               </svg>
             </a>
+            </div>
             <p class="user-details">
               <a href="blank.html" title="Мои заказы">
                 Мои заказы
@@ -105,7 +103,7 @@
               </a>
             </li>
             <li>
-              <a href="catalog.html" title="Каталог">
+              <a title="Каталог">
                 Каталог
               </a>
             </li>
@@ -189,12 +187,12 @@
                         <div class="range-toggle range-toggle-max"></div>
                       </div>
                       <div class="price-controls">
-                        <p class="min-price">
+                        <label class="min-price">
                           <input type="text" name="min-price" value="0">
-                        </p>
-                        <p class="max-price">
+                        </label>
+                        <label class="max-price">
                           <input type="text" name="max-price" value="30000">
-                        </p>
+                        </label>
                       </div>
                     </div>
                   </fieldset>
@@ -205,9 +203,9 @@
                     <ul>
                       <li class="filter-option">
                         <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="prod1" name="Bosch" checked>
-                        <label for="prod2">
+                        <label for="prod1">
                           Bosch
-                        </label>
+                        </label>  
                       </li>
                       <li class="filter-option">
                         <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="prod2" name="Interskol">
@@ -514,22 +512,22 @@
               </ul>
               <ul class="pagination-page">
                 <li class="pagination-item">
-                  <a title="1 страница каталога" href="" class="active">
+                  <a title="1 страница каталога" class="active">
                     1
                   </a>
                 </li>
                 <li class="pagination-item">
-                  <a href="" title="2 страница каталога">
+                  <a href="blank.html" title="2 страница каталога">
                     2
                   </a>
                 </li>
                 <li class="pagination-item">
-                  <a href="" title="3 страница каталога">
+                  <a href="blank.html" title="3 страница каталога">
                     3
                   </a>
                 </li>
                 <li class="pagination-item">
-                  <a href="" title="Следующая страница каталога">
+                  <a href="blank.html" title="Следующая страница каталога">
                     Следующая
                   </a>
                 </li>
@@ -588,7 +586,7 @@
               </a>
             </li>
             <li>
-              <a href="catalog.html" title="Каталог">
+              <a title="Каталог">
                 Каталог
               </a>
             </li>
